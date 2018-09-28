@@ -1,14 +1,32 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>paper-pagination</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../iron-component-page/iron-component-page.html">
+    <title>Polymer 3.0 example</title>
+    <!-- Polyfills only needed for Firefox and Edge. -->
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
   </head>
-  <body>
-    <iron-component-page src="paper-pagination.html"></iron-component-page>
-  </body>
+<body>
+
+  <!-- Define a new Custom Element by extending Polymer's base class  -->
+  <script type="module">
+    import {PolymerElement, html} from '@polymer/polymer';
+
+    class MyElement extends PolymerElement {
+
+      static get properties() { return { mood: String }}
+
+      static get template() {
+        return html`
+          <style> .mood { color: green; } </style>
+          COOL Web Components are <span class="mood">[[mood]]</span>!
+        `;
+      }
+    }
+
+    customElements.define('my-element', MyElement);
+  </script>
+
+  <!--  Use element like any other HTML tag  -->
+  <my-element mood="awesome"></my-element>
+</body>
 </html>

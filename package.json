@@ -15,9 +15,6 @@
     "Dong Hung Phung <donghung.viethanit@gmail.com>",
     "Benoit Claveau <benoit.claveau@gmail>"
   ],
-  "scripts": {
-    "serve": "polymer serve --port 8080 --entrypoint demo.html"
-  },
   "devDependencies": {},
   "repository": {
     "type": "git",

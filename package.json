@@ -1,21 +1,32 @@
 {
-    "description": "A material design element inspire by Danny Phung that generate pagination bar",
-    "name": "@polymer/paper-pagination",
-    "version": "3.0.0",
-    "main": "paper-pagination.js",
-    "dependencies": {
-        "@polymer/polymer": "^3.0.0",
-        "@polymer/paper-listbox": "latest",
-        "@polymer/paper-icon-button": "latest",
-        "web-animations-js": "latest",
-        "polymer-cli": "latest",
-        "@webcomponents/webcomponentsjs": "latest"
-    },
-    "authors": [
-        "Dong Hung Phung <donghung.viethanit@gmail.com>",
-        "Benoit Claveau <benoit.claveau@gmail>"
-    ],
-    "scripts": {
-        "serve": "polymer serve --port 8080 --entrypoint demo.html"
-    }
+  "description": "A material design element inspire by Danny Phung that generate pagination bar",
+  "name": "@polymer/paper-pagination",
+  "version": "3.0.0",
+  "main": "paper-pagination.js",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "@polymer/paper-listbox": "latest",
+    "@polymer/paper-icon-button": "latest",
+    "web-animations-js": "latest",
+    "polymer-cli": "latest",
+    "@webcomponents/webcomponentsjs": "latest"
+  },
+  "authors": [
+    "Dong Hung Phung <donghung.viethanit@gmail.com>",
+    "Benoit Claveau <benoit.claveau@gmail>"
+  ],
+  "scripts": {
+    "serve": "polymer serve --port 8080 --entrypoint demo.html"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenoitClaveau/paper-pagination.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenoitClaveau/paper-pagination/issues"
+  },
+  "homepage": "https://github.com/BenoitClaveau/paper-pagination#readme"
 }

@@ -1,7 +1,7 @@
-import { PolymerElement, html } from './node_modules/@polymer/polymer';
-import './node_modules/@polymer/paper-listbox/paper-listbox.js';
-import './node_modules/@polymer/paper-item/paper-item.js';
-import './node_modules/@polymer/paper-icon-button/paper-icon-button.js';
+import { PolymerElement, html } from '@polymer/polymer';
+import '@polymer/paper-listbox/paper-listbox.js';
+import '@polymer/paper-item/paper-item.js';
+import '@polymer/paper-icon-button/paper-icon-button.js';
 
 class PaperPagination extends PolymerElement {
 

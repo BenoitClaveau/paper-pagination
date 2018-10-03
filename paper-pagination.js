@@ -57,6 +57,7 @@ class PaperPagination extends PolymerElement {
     }
 
     ready() {
+        super.ready();
         this.itemWidth = 50;
         this.prevWidth = this.nextWidth = 40;
     }
@@ -135,7 +136,7 @@ class PaperPagination extends PolymerElement {
             timeFraction = timeFraction == null ? 1 : timeFraction;
             effect.target.scrollTop = scrollTop - (scrollTop * timeFraction);
         };
-        var myAnimation = document.timeline.play(myEffect);
+        document.timeline.play(myEffect);
     }
 
     rangeSizeChanged(rangeSize) {
@@ -147,7 +148,6 @@ class PaperPagination extends PolymerElement {
         var rect = container.getBoundingClientRect();
         if (rect.top == 0 && rect.bottom == 0) return;
         var width = rect.right - rect.left;
-        var height = rect.top - rect.bottom;
         visible = this.pages.filter(function (item) {
             return !item.hidden;
         }).length;
@@ -168,6 +168,9 @@ class PaperPagination extends PolymerElement {
     static get template() {
         return html`
 <style>
+    :host {
+        --paper-listbox-background-color: transparent;
+    }
     :host [hidden] {
         display: none;
     }

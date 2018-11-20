@@ -114,7 +114,7 @@ class PaperPagination extends LitElement {
         }
 
         const res = [];
-        for (var i = start; i <= end; i++) {
+        for (var i = start; i < end; i++) {
             res.push({
                 page: i,
                 label: i + 1,

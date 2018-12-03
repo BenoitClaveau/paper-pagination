@@ -1,12 +1,13 @@
 {
   "description": "A material design element inspire by Danny Phung that generate pagination bar",
   "name": "@polymer/paper-pagination",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "main": "paper-pagination.js",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
     "@polymer/paper-button": "latest",
     "@polymer/paper-icon-button": "latest",
+    "lit-html": "latest",
     "polymer-cli": "latest",
     "@webcomponents/webcomponentsjs": "latest"
   },

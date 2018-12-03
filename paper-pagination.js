@@ -1,7 +1,7 @@
 import { LitElement, html } from '@polymer/lit-element';
 import "@polymer/paper-button/paper-button.js";
 import '@polymer/paper-icon-button/paper-icon-button.js';
-import { classMap } from 'lit-html/directives/classMap';
+import { classMap } from 'lit-html/directives/class-map';
 
 
 const styles = html`

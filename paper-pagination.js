@@ -1,36 +1,37 @@
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element';
 import "@polymer/paper-button/paper-button.js";
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import { classMap } from 'lit-html/directives/class-map';
 
-
-const styles = html`
-<style>
-    .container {
-        display: flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items: center;
-    }
-    paper-listbox {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    paper-button {
-        min-width: 0;
-        font-weight: var(--paper-pagination-active-weight, 400);
-        font-size: var(--paper-pagination-font-size, 13px);
-    }
-    .active {
-        color: var(--paper-pagination-active-color, #af4477);
-        font-weight: var(--paper-pagination-active-font-weight, 600);
-    }
-</style>
-`;
-
 class PaperPagination extends LitElement {
+
+    static get styles() {
+        return [
+            css`
+                .container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:center;
+                    align-items: center;
+                }
+                paper-listbox {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+                paper-button {
+                    min-width: 0;
+                    font-weight: var(--paper-pagination-active-weight, 400);
+                    font-size: var(--paper-pagination-font-size, 13px);
+                }
+                .active {
+                    color: var(--paper-pagination-active-color, #af4477);
+                    font-weight: var(--paper-pagination-active-font-weight, 600);
+                }
+            `
+        ];
+    }
 
     static get properties() {
         return {
@@ -126,7 +127,6 @@ class PaperPagination extends LitElement {
     render() {
         const items = this.getVisibleItems();
         return html`
-            ${styles}
             <div class="container">
                 ${ !this.hiddenFirstPageButton &&
                     html`

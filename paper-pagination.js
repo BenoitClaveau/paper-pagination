@@ -98,10 +98,10 @@ class PaperPagination extends LitElement {
 
     getVisibleItems() {
         const pageCount = this.pageCount;
-        var rangeSizeIndex = this.range - 1;
-        var start = 0;
-        var end = Math.min(rangeSizeIndex, pageCount);
-        var mid = Math.floor(rangeSizeIndex / 2);
+        const rangeSizeIndex = Math.min(this.range - 1, pageCount);
+        let start = 0;
+        let end = rangeSizeIndex;
+        let mid = Math.floor(rangeSizeIndex / 2);
         
 
         if (this.index > mid) {
@@ -110,12 +110,12 @@ class PaperPagination extends LitElement {
         }
 
         if (this.index > pageCount - mid - 1) {
-            end = pageCount - 1;
+            end = pageCount;
             start = end - rangeSizeIndex;
         }
 
         const res = [];
-        for (var i = start; i < end; i++) {
+        for (let i = start; i < end; i++) {
             res.push({
                 page: i,
                 label: i + 1,
